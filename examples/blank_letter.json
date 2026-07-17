@@ -7,8 +7,6 @@
     "subtitle": "K-12 FACULTY & STAFF",
     "subject": "Employment Verification for {{employee.name}}",
     "greeting": "To Whom It May Concern:",
-    "draftWatermark": true,
-    "watermarkText": "DRAFT - NOT FOR DISTRIBUTION",
     "statusLabel": "OFFICIAL SCHOOL RECORD",
     "labels": {
       "date": "Date",

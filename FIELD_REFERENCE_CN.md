@@ -12,8 +12,6 @@ HTML 编辑器支持完整 JSON 导入导出。正文与证明字段可以通过
 | `document.subtitle` | 右上角副标题 |
 | `document.subject` | 主题行，可使用 Token |
 | `document.greeting` | 称呼 |
-| `document.draftWatermark` | 是否显示草稿水印 |
-| `document.watermarkText` | 水印文字 |
 | `document.statusLabel` | 正式文件状态标签 |
 | `document.labels.date` | 日期标签 |
 | `document.labels.id` | ID 标签 |

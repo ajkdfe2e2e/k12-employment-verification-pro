@@ -2,7 +2,7 @@
 
 这是一套用于学校授权行政人员、人力资源部门或校长办公室签发英文 `Employment Verification Letter` 的正式模板。**编辑器界面为简体中文**（按钮、分区、状态与校验提示）；**信件正文与证明字段内容保持英文**，以符合美国正式文件习惯。页面按美国 `Letter` 纸张设计（8.5 × 11 英寸），可直接在浏览器中逐字段修改，也可用 JSON 和 Python 批量/自动生成 PDF。
 
-示例数据使用演示电话和保留域名，PDF 带有 `SAMPLE - NOT VALID` 水印。正式输出检查会阻止这些演示信息被误当成真实文件。
+示例数据使用演示电话和保留域名。正式输出检查会阻止这些演示信息被误当成真实文件。
 
 ## 下载后保留的目录结构
 
@@ -62,7 +62,7 @@ k12_employment_verification_pro_editor_singlefile.html
    - 打开“Advanced JSON Editor”编辑完整数据；
    - 开启 `Click-to-edit preview`，直接点击右侧信件文字修改。
 4. 上传学校正式 Logo；需要时上传授权签字人的透明 PNG 签名。
-5. 审核稿点击 `Print / Save Draft PDF`，会保留草稿水印。
+5. 审核稿点击 `打印 / 保存草稿 PDF`。
 6. 正式稿点击 `Validate & Print Final`。模板会检查必填项、演示数据和页面溢出。
 7. 浏览器打印窗口设置：
    - Destination：`Save as PDF`
@@ -112,7 +112,6 @@ python generate_pdf.py \
 
 `--final` 会：
 
-- 移除草稿水印；
 - 检查学校、教师、签字人和核验必填字段；
 - 阻止方括号占位符、演示电话、保留域名、`sample` 或 `draft` 等测试内容；
 - 检查薪资开关与薪资内容是否一致；

@@ -5,7 +5,7 @@ Examples:
     python generate_pdf.py --data examples/sample_letter.json --output output/sample_draft.pdf
     python generate_pdf.py --data my_teacher.json --output output/teacher_letter.pdf --final
 
-Final mode removes the draft watermark and blocks obvious placeholders unless
+Final mode blocks obvious placeholders unless
 --force is supplied for controlled layout testing.
 """
 
@@ -216,7 +216,7 @@ def main() -> int:
         help="HTML editor/template path",
     )
     parser.add_argument("--output", "-o", required=True, type=Path, help="Output PDF path")
-    parser.add_argument("--final", action="store_true", help="Remove draft watermark and enforce final checks")
+    parser.add_argument("--final", action="store_true", help="Enforce final issuance checks")
     parser.add_argument(
         "--force",
         action="store_true",

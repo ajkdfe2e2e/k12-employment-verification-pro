@@ -322,22 +322,6 @@
       pointer-events: none;
       opacity: 1;
     }
-    .watermark {
-      position: absolute;
-      z-index: 1;
-      top: 4.85in;
-      left: 0.55in;
-      width: 7.4in;
-      transform: rotate(-28deg);
-      color: rgba(96, 110, 124, 0.105);
-      text-align: center;
-      font-size: 38pt;
-      line-height: 1;
-      font-weight: 900;
-      letter-spacing: 4px;
-      white-space: nowrap;
-      pointer-events: none;
-    }
 
     .page-main {
       position: relative;
@@ -614,7 +598,7 @@
       <p>美国学校正式在职证明信模板。界面控件均为中文；信件正文保持英文。可编辑所有可见文字、字段、版式、颜色与核验信息。</p>
       <div class="status-bar">
         <span id="pageStatus" class="status-chip">正在检查页数</span>
-        <span id="validationStatus" class="status-chip">草稿模式</span>
+        <span id="validationStatus" class="status-chip">校验中</span>
         <span id="fingerprintStatus" class="status-chip">指纹已就绪</span>
       </div>
     </div>
@@ -632,7 +616,6 @@
 
     <div class="quick-options">
       <label><input id="directEditToggle" type="checkbox" /> 点击预览直接编辑</label>
-      <label><input data-path="document.draftWatermark" type="checkbox" /> 显示草稿水印</label>
       <label class="zoom-control"><span>预览缩放</span><input id="zoomRange" type="range" min="55" max="115" value="82" /><span id="zoomValue">82%</span></label>
     </div>
 
@@ -649,7 +632,6 @@
         <div class="field"><label>正式状态页脚标签</label><input data-path="document.statusLabel" type="text" /></div>
         <div class="field full"><label>主题行</label><input data-path="document.subject" type="text" /></div>
         <div class="field full"><label>称呼</label><input data-path="document.greeting" type="text" /></div>
-        <div class="field full"><label>显示草稿水印 text</label><input data-path="document.watermarkText" type="text" /></div>
         <label class="check-field"><input data-path="recipient.enabled" type="checkbox" /> 显示具名收件人 / 地址块</label>
         <div class="field"><label>收件人姓名</label><input data-path="recipient.name" type="text" /></div>
         <div class="field"><label>收件人职务</label><input data-path="recipient.title" type="text" /></div>
@@ -795,7 +777,6 @@
       <div class="paper-stage" id="paperStage">
         <article class="letter-sheet style-classic density-comfortable" id="letterSheet">
           <div class="letterhead-art" id="letterheadArt"></div>
-          <div class="watermark" id="watermark"></div>
 
           <div class="page-main">
             <header class="letterhead">
@@ -875,8 +856,6 @@
       subtitle: 'K-12 FACULTY & STAFF',
       subject: 'Employment Verification for {{employee.name}}',
       greeting: 'To Whom It May Concern:',
-      draftWatermark: true,
-      watermarkText: 'SAMPLE - NOT VALID',
       statusLabel: 'OFFICIAL SCHOOL RECORD',
       labels: { date: 'Date', id: 'Letter ID', subjectPrefix: 'RE:' }
     },
@@ -1032,7 +1011,7 @@
     if (!isObject(value)) return value;
     const excluded = new Set([
       'school.logoDataUrl', 'school.letterheadDataUrl', 'signatory.signatureDataUrl',
-      'verification.qrDataUrl', 'verification.recordFingerprint', 'document.draftWatermark', 'document.watermarkText'
+      'verification.qrDataUrl', 'verification.recordFingerprint'
     ]);
     const result = {};
     Object.keys(value).sort().forEach((key) => {
@@ -1186,10 +1165,6 @@
     setText('#subjectPrefix', data.document.labels.subjectPrefix);
     setText('#subjectText', resolveTokens(data.document.subject));
     setText('#greeting', resolveTokens(data.document.greeting));
-    const watermark = $('#watermark');
-    watermark.hidden = !data.document.draftWatermark;
-    setText(watermark, data.document.watermarkText);
-
     const recipient = $('#recipientBlock');
     recipient.hidden = !data.recipient.enabled;
     if (data.recipient.enabled) {
@@ -1465,7 +1440,7 @@
     ];
     const problems = [];
     function walk(value, path = '') {
-      if (typeof value === 'string' && !path.endsWith('DataUrl') && path !== 'document.watermarkText') {
+      if (typeof value === 'string' && !path.endsWith('DataUrl')) {
         if (patterns.some((pattern) => pattern.test(value))) problems.push(`${path}: ${value}`);
       } else if (Array.isArray(value)) value.forEach((item, index) => walk(item, `${path}.${index}`));
       else if (isObject(value)) Object.entries(value).forEach(([key, item]) => walk(item, path ? `${path}.${key}` : key));
@@ -1507,19 +1482,16 @@
   function updateValidationBadge() {
     const result = validateFinal();
     const chip = $('#validationStatus');
-    if (data.document.draftWatermark) {
-      chip.textContent = '草稿模式'; chip.className = 'status-chip warn';
-    } else if (result.valid) {
+    if (result.valid) {
       chip.textContent = '正式校验已通过'; chip.className = 'status-chip good';
     } else {
-      chip.textContent = `正式稿还有 ${result.errors.length} 项问题`; chip.className = 'status-chip bad';
+      chip.textContent = `还有 ${result.errors.length} 项问题`; chip.className = 'status-chip bad';
     }
   }
 
   async function prepareForPdf(options = {}) {
     const finalMode = Boolean(options.final);
     if (!suppressFingerprintRefresh) await computeFingerprint();
-    data.document.draftWatermark = !finalMode;
     refreshStaticControls(); render();
     await document.fonts.ready;
     await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
@@ -1530,13 +1502,11 @@
   }
 
   async function printDraft() {
-    data.document.draftWatermark = true;
     await computeFingerprint(); refreshStaticControls(); render();
     window.print();
   }
 
   async function printFinal() {
-    data.document.draftWatermark = false;
     await computeFingerprint(); refreshStaticControls(); render();
     await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
     checkOverflow();
@@ -1568,6 +1538,10 @@
 
   function setLetterData(payload) {
     data = deepMerge(deepClone(defaultData), payload || {});
+    if (data.document) {
+      delete data.document.draftWatermark;
+      delete data.document.watermarkText;
+    }
     suppressFingerprintRefresh = Boolean(data.verification.recordFingerprint);
     refreshStaticControls();
     return computeFingerprint().then(() => { suppressFingerprintRefresh = false; render(); updateValidationBadge(); return true; });
