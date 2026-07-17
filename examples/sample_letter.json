@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "2.0",
+  "document": {
+    "issueDate": "July 14, 2026",
+    "id": "EVL-2026-0714-10427",
+    "title": "EMPLOYMENT VERIFICATION",
+    "subtitle": "K-12 FACULTY & STAFF",
+    "subject": "Employment Verification for {{employee.name}}",
+    "greeting": "To Whom It May Concern:",
+    "draftWatermark": true,
+    "watermarkText": "SAMPLE - NOT VALID",
+    "statusLabel": "OFFICIAL SCHOOL RECORD",
+    "labels": {
+      "date": "Date",
+      "id": "Letter ID",
+      "subjectPrefix": "RE:"
+    }
+  },
+  "school": {
+    "legalName": "American Higher Education K-12 Academy",
+    "displayName": "American Higher Education K-12 Academy",
+    "initials": "AHE",
+    "officeName": "Office of Human Resources",
+    "secondaryLine": "Independent College-Preparatory School | Grades K-12",
+    "addressLine1": "1000 Academy Plaza",
+    "cityStateZip": "Irvine, CA 92618",
+    "phone": "(949) 555-0148",
+    "fax": "",
+    "email": "hr@ahek12.example",
+    "website": "www.ahek12.example",
+    "ncesId": "",
+    "stateSchoolId": "",
+    "logoDataUrl": "",
+    "letterheadDataUrl": ""
+  },
+  "recipient": {
+    "enabled": false,
+    "name": "",
+    "title": "",
+    "organization": "",
+    "address": ""
+  },
+  "employee": {
+    "name": "Jordan Lee",
+    "id": "EMP-10427",
+    "jobTitle": "Mathematics Teacher",
+    "department": "Upper School / Mathematics Department",
+    "campus": "Main Campus",
+    "gradeSubject": "Grades 9-12; Algebra II and Precalculus",
+    "status": "Full-time, active employee",
+    "startDate": "August 15, 2022",
+    "endDate": "",
+    "scheduleFte": "1.0 FTE / 40 hours per week",
+    "contractTerm": "2026-2027 Academic Year",
+    "supervisor": "",
+    "license": "",
+    "includeCompensation": false,
+    "compensation": "$78,500",
+    "compensationBasis": "Annual base salary",
+    "note": ""
+  },
+  "letter": {
+    "bodyParagraphs": [
+      "At the request and with the authorization of {{employee.name}}, this letter confirms that {{employee.name}} is currently employed by {{school.legalName}}, a K-12 educational institution. The information below is provided for employment and professional-status verification.",
+      "According to the School's official personnel records, the following information is accurate as of {{document.issueDate}}."
+    ],
+    "closingParagraph": "For independent verification, please contact {{school.officeName}} at {{verification.phone}} or {{verification.email}} and reference Letter ID {{document.id}}.",
+    "disclaimer": "This letter confirms the employment information stated above. It does not constitute an employment contract, a guarantee of continued employment, or a waiver of any School policy.",
+    "complimentaryClose": "Sincerely,",
+    "footerText": "This document contains personnel information and is intended only for the authorized recipient. Questions should be directed to the issuing school office.",
+    "footerRight": "OFFICIAL SCHOOL RECORD"
+  },
+  "detailRows": [
+    {
+      "label": "Employee Name",
+      "value": "{{employee.name}}",
+      "width": "half",
+      "enabled": true
+    },
+    {
+      "label": "Employee ID",
+      "value": "{{employee.id}}",
+      "width": "half",
+      "enabled": true
+    },
+    {
+      "label": "Position",
+      "value": "{{employee.jobTitle}}",
+      "width": "half",
+      "enabled": true
+    },
+    {
+      "label": "Department / Division",
+      "value": "{{employee.department}}",
+      "width": "half",
+      "enabled": true
+    },
+    {
+      "label": "Grade Level(s) / Subject(s)",
+      "value": "{{employee.gradeSubject}}",
+      "width": "half",
+      "enabled": true
+    },
+    {
+      "label": "Employment Status",
+      "value": "{{employee.status}}",
+      "width": "half",
+      "enabled": true
+    },
+    {
+      "label": "Employment Start Date",
+      "value": "{{employee.startDate}}",
+      "width": "half",
+      "enabled": true
+    },
+    {
+      "label": "Schedule / FTE",
+      "value": "{{employee.scheduleFte}}",
+      "width": "half",
+      "enabled": true
+    },
+    {
+      "label": "Contract Term / School Year",
+      "value": "{{employee.contractTerm}}",
+      "width": "full",
+      "enabled": true
+    }
+  ],
+  "signatory": {
+    "name": "Elena Martinez",
+    "credentials": "Ed.D.",
+    "title": "Director of Human Resources",
+    "department": "Office of Human Resources",
+    "phone": "(949) 555-0148",
+    "email": "elena.martinez@ahek12.example",
+    "typedSignature": "Elena Martinez",
+    "showTypedSignature": true,
+    "signatureDataUrl": ""
+  },
+  "verification": {
+    "enabled": true,
+    "showQr": true,
+    "title": "DOCUMENT VERIFICATION",
+    "url": "https://verify.ahek12.example/EVL-2026-0714-10427",
+    "phone": "(949) 555-0148",
+    "email": "hr@ahek12.example",
+    "instructions": "Verify this letter through the official contact information above or scan the QR code. Alteration or unauthorized reproduction may invalidate the document.",
+    "fingerprintLabel": "Record fingerprint",
+    "recordFingerprint": "D2A4-7FAD-9B88-9AC5-CF2C",
+    "qrDataUrl": ""
+  },
+  "theme": {
+    "style": "classic",
+    "density": "comfortable",
+    "bodyFont": "Arial, Helvetica, sans-serif",
+    "headingFont": "Georgia, \"Times New Roman\", serif",
+    "primaryColor": "#17324d",
+    "accentColor": "#b68a32",
+    "baseFontSize": 10.2
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "schema": "k12-employment-verification-manifest/1.0",
+  "generatedAtUtc": "2026-07-14T23:50:52.979022+00:00",
+  "documentId": "EVL-2026-0714-10427",
+  "recordFingerprint": "D2A4-7FAD-9B88-9AC5-CF2C",
+  "employeeName": "Jordan Lee",
+  "issuingSchool": "American Higher Education K-12 Academy",
+  "pdfFile": "sample_employment_verification_pro_draft.pdf",
+  "pdfSha256": "4B527EC9A54CA12A4C9BBEE5A5E0B2C62D733189B721372CA0D714D0F342ABA0"
+}

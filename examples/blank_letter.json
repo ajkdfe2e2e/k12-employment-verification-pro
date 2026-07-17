@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "2.0",
+  "document": {
+    "issueDate": "[MONTH DAY, YEAR]",
+    "id": "[UNIQUE LETTER ID]",
+    "title": "EMPLOYMENT VERIFICATION",
+    "subtitle": "K-12 FACULTY & STAFF",
+    "subject": "Employment Verification for {{employee.name}}",
+    "greeting": "To Whom It May Concern:",
+    "draftWatermark": true,
+    "watermarkText": "DRAFT - NOT FOR DISTRIBUTION",
+    "statusLabel": "OFFICIAL SCHOOL RECORD",
+    "labels": {
+      "date": "Date",
+      "id": "Letter ID",
+      "subjectPrefix": "RE:"
+    }
+  },
+  "school": {
+    "legalName": "[LEGAL SCHOOL NAME]",
+    "displayName": "[SCHOOL DISPLAY NAME]",
+    "initials": "K12",
+    "officeName": "Office of Human Resources",
+    "secondaryLine": "[DISTRICT / NETWORK / SCHOOL TYPE / GRADES]",
+    "addressLine1": "[STREET ADDRESS]",
+    "cityStateZip": "[CITY, STATE ZIP]",
+    "phone": "[OFFICIAL SCHOOL PHONE]",
+    "fax": "",
+    "email": "[OFFICIAL SCHOOL EMAIL]",
+    "website": "[OFFICIAL SCHOOL WEBSITE]",
+    "ncesId": "",
+    "stateSchoolId": "",
+    "logoDataUrl": "",
+    "letterheadDataUrl": ""
+  },
+  "recipient": {
+    "enabled": false,
+    "name": "",
+    "title": "",
+    "organization": "",
+    "address": ""
+  },
+  "employee": {
+    "name": "[EMPLOYEE NAME]",
+    "id": "[EMPLOYEE ID]",
+    "jobTitle": "[JOB TITLE]",
+    "department": "[DEPARTMENT / DIVISION]",
+    "campus": "[CAMPUS / WORK LOCATION]",
+    "gradeSubject": "[GRADE LEVELS / SUBJECTS]",
+    "status": "[FULL-TIME / PART-TIME / ACTIVE STATUS]",
+    "startDate": "[EMPLOYMENT START DATE]",
+    "endDate": "",
+    "scheduleFte": "[FTE / HOURS PER WEEK]",
+    "contractTerm": "[ACADEMIC YEAR / CONTRACT TERM]",
+    "supervisor": "",
+    "license": "",
+    "includeCompensation": false,
+    "compensation": "",
+    "compensationBasis": "",
+    "note": ""
+  },
+  "letter": {
+    "bodyParagraphs": [
+      "At the request and with the authorization of {{employee.name}}, this letter confirms that {{employee.name}} is currently employed by {{school.legalName}}, a K-12 educational institution. The information below is provided for employment and professional-status verification.",
+      "According to the School's official personnel records, the following information is accurate as of {{document.issueDate}}."
+    ],
+    "closingParagraph": "For independent verification, please contact {{school.officeName}} at {{verification.phone}} or {{verification.email}} and reference Letter ID {{document.id}}.",
+    "disclaimer": "This letter confirms the employment information stated above. It does not constitute an employment contract, a guarantee of continued employment, or a waiver of any School policy.",
+    "complimentaryClose": "Sincerely,",
+    "footerText": "This document contains personnel information and is intended only for the authorized recipient. Questions should be directed to the issuing school office.",
+    "footerRight": "OFFICIAL SCHOOL RECORD"
+  },
+  "detailRows": [
+    {
+      "label": "Employee Name",
+      "value": "{{employee.name}}",
+      "width": "half",
+      "enabled": true
+    },
+    {
+      "label": "Employee ID",
+      "value": "{{employee.id}}",
+      "width": "half",
+      "enabled": true
+    },
+    {
+      "label": "Position",
+      "value": "{{employee.jobTitle}}",
+      "width": "half",
+      "enabled": true
+    },
+    {
+      "label": "Department / Division",
+      "value": "{{employee.department}}",
+      "width": "half",
+      "enabled": true
+    },
+    {
+      "label": "Grade Level(s) / Subject(s)",
+      "value": "{{employee.gradeSubject}}",
+      "width": "half",
+      "enabled": true
+    },
+    {
+      "label": "Employment Status",
+      "value": "{{employee.status}}",
+      "width": "half",
+      "enabled": true
+    },
+    {
+      "label": "Employment Start Date",
+      "value": "{{employee.startDate}}",
+      "width": "half",
+      "enabled": true
+    },
+    {
+      "label": "Schedule / FTE",
+      "value": "{{employee.scheduleFte}}",
+      "width": "half",
+      "enabled": true
+    },
+    {
+      "label": "Contract Term / School Year",
+      "value": "{{employee.contractTerm}}",
+      "width": "full",
+      "enabled": true
+    }
+  ],
+  "signatory": {
+    "name": "[AUTHORIZED SIGNATORY]",
+    "credentials": "",
+    "title": "[SIGNATORY TITLE]",
+    "department": "Office of Human Resources",
+    "phone": "[VERIFICATION PHONE]",
+    "email": "[VERIFICATION EMAIL]",
+    "typedSignature": "[AUTHORIZED SIGNATORY]",
+    "showTypedSignature": true,
+    "signatureDataUrl": ""
+  },
+  "verification": {
+    "enabled": true,
+    "showQr": true,
+    "title": "DOCUMENT VERIFICATION",
+    "url": "[OFFICIAL VERIFICATION URL]",
+    "phone": "[VERIFICATION PHONE]",
+    "email": "[VERIFICATION EMAIL]",
+    "instructions": "Verify this letter through the official contact information above or scan the QR code. Alteration or unauthorized reproduction may invalidate the document.",
+    "fingerprintLabel": "Record fingerprint",
+    "recordFingerprint": "",
+    "qrDataUrl": ""
+  },
+  "theme": {
+    "style": "classic",
+    "density": "comfortable",
+    "bodyFont": "Arial, Helvetica, sans-serif",
+    "headingFont": "Georgia, \"Times New Roman\", serif",
+    "primaryColor": "#17324d",
+    "accentColor": "#b68a32",
+    "baseFontSize": 10.2
+  }
+}

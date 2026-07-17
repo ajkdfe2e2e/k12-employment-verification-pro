@@ -1,0 +1,4 @@
+K-12 Employment Verification Letter Pro
+Version: 2.0.0
+Build date: 2026-07-14
+Page format: U.S. Letter (8.5 x 11 in)

@@ -1,0 +1,7 @@
+QRCode for JavaScript
+Copyright (c) 2009 Kazuhiko Arase
+Licensed under the MIT License.
+
+The QR Code encoder source was obtained from the qrcode-terminal package's
+vendor/QRCode directory and bundled locally for offline browser use.
+"QR Code" is a registered trademark of DENSO WAVE INCORPORATED.
