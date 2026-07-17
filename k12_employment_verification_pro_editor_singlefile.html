@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>K-12 Employment Verification Letter - Pro Editor</title>
+  <title>K-12 在职证明信 Pro 编辑器</title>
   <script>
 /* QRCode for JavaScript, Copyright (c) 2009 Kazuhiko Arase, MIT License. Bundled locally for offline use. */
 (function(global){
@@ -1881,187 +1881,187 @@ global.QRErrorCorrectLevel = __require('QRCode/QRErrorCorrectLevel.js');
 <div class="app">
   <aside class="editor" id="editorPanel">
     <div class="editor-header">
-      <h1>K-12 Employment Letter Pro</h1>
-      <p>Official U.S. school employment verification letter. All visible text, labels, rows, colors, images, and verification fields are editable.</p>
+      <h1>K-12 在职证明信 Pro</h1>
+      <p>美国学校正式在职证明信模板。界面控件均为中文；信件正文保持英文。可编辑所有可见文字、字段、版式、颜色与核验信息。</p>
       <div class="status-bar">
-        <span id="pageStatus" class="status-chip">Checking page</span>
-        <span id="validationStatus" class="status-chip">Draft mode</span>
-        <span id="fingerprintStatus" class="status-chip">Fingerprint ready</span>
+        <span id="pageStatus" class="status-chip">正在检查页数</span>
+        <span id="validationStatus" class="status-chip">草稿模式</span>
+        <span id="fingerprintStatus" class="status-chip">指纹已就绪</span>
       </div>
     </div>
 
     <div class="toolbar">
-      <button type="button" class="primary" data-action="print-draft">Print / Save Draft PDF</button>
-      <button type="button" class="final" data-action="print-final">Validate &amp; Print Final</button>
-      <button type="button" data-action="export-json">Export JSON</button>
-      <label class="file-label">Import JSON<input id="jsonFileInput" type="file" accept="application/json,.json" /></label>
-      <button type="button" data-action="save-local">Save Browser Draft</button>
-      <button type="button" data-action="load-local">Load Browser Draft</button>
-      <button type="button" data-action="auto-fit">Auto-fit One Page</button>
-      <button type="button" class="danger" data-action="reset">Reset Sample</button>
+      <button type="button" class="primary" data-action="print-draft">打印 / 保存草稿 PDF</button>
+      <button type="button" class="final" data-action="print-final">校验并打印正式稿</button>
+      <button type="button" data-action="export-json">导出 JSON</button>
+      <label class="file-label">导入 JSON<input id="jsonFileInput" type="file" accept="application/json,.json" /></label>
+      <button type="button" data-action="save-local">保存浏览器草稿</button>
+      <button type="button" data-action="load-local">加载浏览器草稿</button>
+      <button type="button" data-action="auto-fit">自动压缩到一页</button>
+      <button type="button" class="danger" data-action="reset">重置为示例</button>
     </div>
 
     <div class="quick-options">
-      <label><input id="directEditToggle" type="checkbox" /> Click-to-edit preview</label>
-      <label><input data-path="document.draftWatermark" type="checkbox" /> Draft watermark</label>
-      <label class="zoom-control"><span>Preview</span><input id="zoomRange" type="range" min="55" max="115" value="82" /><span id="zoomValue">82%</span></label>
+      <label><input id="directEditToggle" type="checkbox" /> 点击预览直接编辑</label>
+      <label><input data-path="document.draftWatermark" type="checkbox" /> 显示草稿水印</label>
+      <label class="zoom-control"><span>预览缩放</span><input id="zoomRange" type="range" min="55" max="115" value="82" /><span id="zoomValue">82%</span></label>
     </div>
 
     <details open>
-      <summary>Document &amp; Recipient</summary>
+      <summary>文档与收件人</summary>
       <div class="fields">
-        <div class="field"><label>Issue date</label><input data-path="document.issueDate" type="text" /></div>
-        <div class="field"><label>Document / Letter ID</label><input data-path="document.id" type="text" /></div>
-        <div class="field"><label>Document title</label><input data-path="document.title" type="text" /></div>
-        <div class="field"><label>Document subtitle</label><input data-path="document.subtitle" type="text" /></div>
-        <div class="field"><label>Date label</label><input data-path="document.labels.date" type="text" /></div>
-        <div class="field"><label>ID label</label><input data-path="document.labels.id" type="text" /></div>
-        <div class="field"><label>Subject prefix</label><input data-path="document.labels.subjectPrefix" type="text" /></div>
-        <div class="field"><label>Final-status footer label</label><input data-path="document.statusLabel" type="text" /></div>
-        <div class="field full"><label>Subject line</label><input data-path="document.subject" type="text" /></div>
-        <div class="field full"><label>Greeting</label><input data-path="document.greeting" type="text" /></div>
-        <div class="field full"><label>Draft watermark text</label><input data-path="document.watermarkText" type="text" /></div>
-        <label class="check-field"><input data-path="recipient.enabled" type="checkbox" /> Include a named recipient/address block</label>
-        <div class="field"><label>Recipient name</label><input data-path="recipient.name" type="text" /></div>
-        <div class="field"><label>Recipient title</label><input data-path="recipient.title" type="text" /></div>
-        <div class="field full"><label>Recipient organization</label><input data-path="recipient.organization" type="text" /></div>
-        <div class="field full"><label>Recipient address (line breaks allowed)</label><textarea data-path="recipient.address"></textarea></div>
+        <div class="field"><label>签发日期</label><input data-path="document.issueDate" type="text" /></div>
+        <div class="field"><label>文档 / 信件编号</label><input data-path="document.id" type="text" /></div>
+        <div class="field"><label>文档标题</label><input data-path="document.title" type="text" /></div>
+        <div class="field"><label>文档副标题</label><input data-path="document.subtitle" type="text" /></div>
+        <div class="field"><label>日期标签文字</label><input data-path="document.labels.date" type="text" /></div>
+        <div class="field"><label>编号标签文字</label><input data-path="document.labels.id" type="text" /></div>
+        <div class="field"><label>主题前缀</label><input data-path="document.labels.subjectPrefix" type="text" /></div>
+        <div class="field"><label>正式状态页脚标签</label><input data-path="document.statusLabel" type="text" /></div>
+        <div class="field full"><label>主题行</label><input data-path="document.subject" type="text" /></div>
+        <div class="field full"><label>称呼</label><input data-path="document.greeting" type="text" /></div>
+        <div class="field full"><label>显示草稿水印 text</label><input data-path="document.watermarkText" type="text" /></div>
+        <label class="check-field"><input data-path="recipient.enabled" type="checkbox" /> 显示具名收件人 / 地址块</label>
+        <div class="field"><label>收件人姓名</label><input data-path="recipient.name" type="text" /></div>
+        <div class="field"><label>收件人职务</label><input data-path="recipient.title" type="text" /></div>
+        <div class="field full"><label>收件机构</label><input data-path="recipient.organization" type="text" /></div>
+        <div class="field full"><label>收件地址（可用换行）</label><textarea data-path="recipient.address"></textarea></div>
       </div>
     </details>
 
     <details open>
-      <summary>School Letterhead</summary>
+      <summary>学校信头</summary>
       <div class="fields">
-        <div class="field full"><label>School display name</label><input data-path="school.displayName" type="text" /></div>
-        <div class="field full"><label>School legal name</label><input data-path="school.legalName" type="text" /></div>
-        <div class="field"><label>School initials / monogram</label><input data-path="school.initials" type="text" /></div>
-        <div class="field"><label>Office / issuing department</label><input data-path="school.officeName" type="text" /></div>
-        <div class="field full"><label>District / network / campus line</label><input data-path="school.secondaryLine" type="text" /></div>
-        <div class="field full"><label>Street address</label><input data-path="school.addressLine1" type="text" /></div>
-        <div class="field full"><label>City, state ZIP</label><input data-path="school.cityStateZip" type="text" /></div>
-        <div class="field"><label>Official phone</label><input data-path="school.phone" type="text" /></div>
-        <div class="field"><label>Fax (optional)</label><input data-path="school.fax" type="text" /></div>
-        <div class="field"><label>Official email</label><input data-path="school.email" type="email" /></div>
-        <div class="field"><label>Official website</label><input data-path="school.website" type="text" /></div>
-        <div class="field"><label>NCES ID (optional)</label><input data-path="school.ncesId" type="text" /></div>
-        <div class="field"><label>State school ID (optional)</label><input data-path="school.stateSchoolId" type="text" /></div>
+        <div class="field full"><label>学校显示名称</label><input data-path="school.displayName" type="text" /></div>
+        <div class="field full"><label>学校法定名称</label><input data-path="school.legalName" type="text" /></div>
+        <div class="field"><label>学校简称 / 字母标识</label><input data-path="school.initials" type="text" /></div>
+        <div class="field"><label>签发部门</label><input data-path="school.officeName" type="text" /></div>
+        <div class="field full"><label>学区 / 网络 / 校区说明</label><input data-path="school.secondaryLine" type="text" /></div>
+        <div class="field full"><label>街道地址</label><input data-path="school.addressLine1" type="text" /></div>
+        <div class="field full"><label>城市、州、邮编</label><input data-path="school.cityStateZip" type="text" /></div>
+        <div class="field"><label>官方电话</label><input data-path="school.phone" type="text" /></div>
+        <div class="field"><label>传真（可选）</label><input data-path="school.fax" type="text" /></div>
+        <div class="field"><label>官方邮箱</label><input data-path="school.email" type="email" /></div>
+        <div class="field"><label>官方网站</label><input data-path="school.website" type="text" /></div>
+        <div class="field"><label>NCES 编号（可选）</label><input data-path="school.ncesId" type="text" /></div>
+        <div class="field"><label>州学校编号（可选）</label><input data-path="school.stateSchoolId" type="text" /></div>
       </div>
     </details>
 
     <details open>
-      <summary>Teacher / Employee Record</summary>
+      <summary>教师 / 员工信息</summary>
       <div class="fields">
-        <div class="field full"><label>Full legal or professional name</label><input data-path="employee.name" type="text" /></div>
-        <div class="field"><label>Employee ID</label><input data-path="employee.id" type="text" /></div>
-        <div class="field"><label>Job title</label><input data-path="employee.jobTitle" type="text" /></div>
-        <div class="field"><label>Department / division</label><input data-path="employee.department" type="text" /></div>
-        <div class="field"><label>Campus / work location</label><input data-path="employee.campus" type="text" /></div>
-        <div class="field full"><label>Grade levels / subjects</label><input data-path="employee.gradeSubject" type="text" /></div>
-        <div class="field"><label>Employment status</label><input data-path="employee.status" type="text" /></div>
-        <div class="field"><label>Employment start date</label><input data-path="employee.startDate" type="text" /></div>
-        <div class="field"><label>End date (optional)</label><input data-path="employee.endDate" type="text" /></div>
-        <div class="field"><label>FTE / weekly schedule</label><input data-path="employee.scheduleFte" type="text" /></div>
-        <div class="field"><label>Contract term / school year</label><input data-path="employee.contractTerm" type="text" /></div>
-        <div class="field"><label>Supervisor (optional)</label><input data-path="employee.supervisor" type="text" /></div>
-        <div class="field"><label>Teacher license / credential (optional)</label><input data-path="employee.license" type="text" /></div>
-        <label class="check-field"><input data-path="employee.includeCompensation" type="checkbox" /> Include compensation only when authorized and required</label>
-        <div class="field"><label>Compensation</label><input data-path="employee.compensation" type="text" /></div>
-        <div class="field"><label>Compensation basis</label><input data-path="employee.compensationBasis" type="text" /></div>
-        <div class="field full"><label>Optional employment note</label><textarea data-path="employee.note"></textarea></div>
+        <div class="field full"><label>法定或专业全名</label><input data-path="employee.name" type="text" /></div>
+        <div class="field"><label>员工编号</label><input data-path="employee.id" type="text" /></div>
+        <div class="field"><label>职位</label><input data-path="employee.jobTitle" type="text" /></div>
+        <div class="field"><label>学部 / 部门</label><input data-path="employee.department" type="text" /></div>
+        <div class="field"><label>校区 / 工作地点</label><input data-path="employee.campus" type="text" /></div>
+        <div class="field full"><label>任教年级 / 学科</label><input data-path="employee.gradeSubject" type="text" /></div>
+        <div class="field"><label>在职状态</label><input data-path="employee.status" type="text" /></div>
+        <div class="field"><label>入职日期</label><input data-path="employee.startDate" type="text" /></div>
+        <div class="field"><label>结束日期（可选）</label><input data-path="employee.endDate" type="text" /></div>
+        <div class="field"><label>FTE / 每周工时</label><input data-path="employee.scheduleFte" type="text" /></div>
+        <div class="field"><label>合同期限 / 学年</label><input data-path="employee.contractTerm" type="text" /></div>
+        <div class="field"><label>主管（可选）</label><input data-path="employee.supervisor" type="text" /></div>
+        <div class="field"><label>教师证 / 资质（可选）</label><input data-path="employee.license" type="text" /></div>
+        <label class="check-field"><input data-path="employee.includeCompensation" type="checkbox" /> 仅在已获授权且确有必要时包含薪资</label>
+        <div class="field"><label>薪资数额</label><input data-path="employee.compensation" type="text" /></div>
+        <div class="field"><label>薪资口径</label><input data-path="employee.compensationBasis" type="text" /></div>
+        <div class="field full"><label>可选在职说明</label><textarea data-path="employee.note"></textarea></div>
       </div>
     </details>
 
     <details open>
-      <summary>Letter Body Paragraphs</summary>
+      <summary>信件正文段落</summary>
       <div class="array-editor">
         <div id="paragraphEditor"></div>
-        <div class="array-footer"><button class="mini-action" type="button" data-action="add-paragraph">+ Add paragraph</button></div>
-        <p class="privacy-note">Use tokens such as <code>{{employee.name}}</code>, <code>{{school.displayName}}</code>, <code>{{document.issueDate}}</code>, and any other JSON path.</p>
+        <div class="array-footer"><button class="mini-action" type="button" data-action="add-paragraph">+ 添加段落</button></div>
+        <p class="privacy-note">可使用 Token，例如 <code>{{employee.name}}</code>、<code>{{school.displayName}}</code>、<code>{{document.issueDate}}</code> 及其他 JSON 路径。</p>
       </div>
     </details>
 
     <details open>
-      <summary>Employment Detail Rows</summary>
+      <summary>在职证明字段</summary>
       <div class="array-editor">
         <div id="detailRowEditor"></div>
         <div class="array-footer">
-          <button class="mini-action" type="button" data-action="add-detail-row">+ Add row</button>
-          <button class="mini-action" type="button" data-action="sync-standard-rows">Restore standard rows</button>
+          <button class="mini-action" type="button" data-action="add-detail-row">+ 添加字段</button>
+          <button class="mini-action" type="button" data-action="sync-standard-rows">恢复标准字段</button>
         </div>
-        <p class="privacy-note">Every label and value is editable. Values may contain the same <code>{{path}}</code> tokens used in paragraphs.</p>
+        <p class="privacy-note">每个标签与内容均可编辑。内容可使用与正文相同的 <code>{{path}}</code> Token。</p>
       </div>
     </details>
 
     <details>
-      <summary>Closing &amp; Legal Text</summary>
+      <summary>结尾与法律说明</summary>
       <div class="fields">
-        <div class="field full"><label>Closing verification paragraph</label><textarea data-path="letter.closingParagraph"></textarea></div>
-        <div class="field full"><label>Legal / employment disclaimer</label><textarea data-path="letter.disclaimer"></textarea></div>
-        <div class="field"><label>Complimentary close</label><input data-path="letter.complimentaryClose" type="text" /></div>
-        <div class="field"><label>Footer right label</label><input data-path="letter.footerRight" type="text" /></div>
-        <div class="field full"><label>Confidentiality / footer text</label><textarea data-path="letter.footerText"></textarea></div>
+        <div class="field full"><label>核验联系段落</label><textarea data-path="letter.closingParagraph"></textarea></div>
+        <div class="field full"><label>法律 / 雇佣免责声明</label><textarea data-path="letter.disclaimer"></textarea></div>
+        <div class="field"><label>结束敬语</label><input data-path="letter.complimentaryClose" type="text" /></div>
+        <div class="field"><label>页脚右侧标签</label><input data-path="letter.footerRight" type="text" /></div>
+        <div class="field full"><label>保密 / 页脚说明</label><textarea data-path="letter.footerText"></textarea></div>
       </div>
     </details>
 
     <details open>
-      <summary>Authorized Signatory</summary>
+      <summary>授权签字人</summary>
       <div class="fields">
-        <div class="field"><label>Name</label><input data-path="signatory.name" type="text" /></div>
-        <div class="field"><label>Credentials</label><input data-path="signatory.credentials" type="text" /></div>
-        <div class="field"><label>Title</label><input data-path="signatory.title" type="text" /></div>
-        <div class="field"><label>Department</label><input data-path="signatory.department" type="text" /></div>
-        <div class="field"><label>Direct / verification phone</label><input data-path="signatory.phone" type="text" /></div>
-        <div class="field"><label>Official email</label><input data-path="signatory.email" type="email" /></div>
-        <div class="field full"><label>Typed signature text</label><input data-path="signatory.typedSignature" type="text" /></div>
-        <label class="check-field"><input data-path="signatory.showTypedSignature" type="checkbox" /> Show typed signature when no signature image is uploaded</label>
+        <div class="field"><label>姓名</label><input data-path="signatory.name" type="text" /></div>
+        <div class="field"><label>学位 / 资质后缀</label><input data-path="signatory.credentials" type="text" /></div>
+        <div class="field"><label>职务</label><input data-path="signatory.title" type="text" /></div>
+        <div class="field"><label>部门</label><input data-path="signatory.department" type="text" /></div>
+        <div class="field"><label>直拨 / 核验电话</label><input data-path="signatory.phone" type="text" /></div>
+        <div class="field"><label>官方邮箱</label><input data-path="signatory.email" type="email" /></div>
+        <div class="field full"><label>打字签名文字</label><input data-path="signatory.typedSignature" type="text" /></div>
+        <label class="check-field"><input data-path="signatory.showTypedSignature" type="checkbox" /> 未上传签名图时显示打字签名</label>
       </div>
     </details>
 
     <details open>
-      <summary>Independent Verification</summary>
+      <summary>独立核验信息</summary>
       <div class="fields">
-        <label class="check-field"><input data-path="verification.enabled" type="checkbox" /> Include the verification panel</label>
-        <label class="check-field"><input data-path="verification.showQr" type="checkbox" /> Generate a QR code from the verification URL</label>
-        <div class="field full"><label>Verification panel title</label><input data-path="verification.title" type="text" /></div>
-        <div class="field full"><label>Verification URL</label><input data-path="verification.url" type="text" /></div>
-        <div class="field"><label>Verification phone</label><input data-path="verification.phone" type="text" /></div>
-        <div class="field"><label>Verification email</label><input data-path="verification.email" type="email" /></div>
-        <div class="field full"><label>Verification instructions</label><textarea data-path="verification.instructions"></textarea></div>
-        <div class="field"><label>Fingerprint label</label><input data-path="verification.fingerprintLabel" type="text" /></div>
-        <div class="field"><label>Override fingerprint (optional)</label><input data-path="verification.recordFingerprint" type="text" /></div>
+        <label class="check-field"><input data-path="verification.enabled" type="checkbox" /> 显示核验面板</label>
+        <label class="check-field"><input data-path="verification.showQr" type="checkbox" /> 根据核验网址生成二维码</label>
+        <div class="field full"><label>核验面板标题</label><input data-path="verification.title" type="text" /></div>
+        <div class="field full"><label>核验网址</label><input data-path="verification.url" type="text" /></div>
+        <div class="field"><label>核验电话</label><input data-path="verification.phone" type="text" /></div>
+        <div class="field"><label>核验邮箱</label><input data-path="verification.email" type="email" /></div>
+        <div class="field full"><label>核验说明</label><textarea data-path="verification.instructions"></textarea></div>
+        <div class="field"><label>指纹标签</label><input data-path="verification.fingerprintLabel" type="text" /></div>
+        <div class="field"><label>覆盖指纹（可选）</label><input data-path="verification.recordFingerprint" type="text" /></div>
       </div>
     </details>
 
     <details>
-      <summary>Appearance &amp; Assets</summary>
+      <summary>外观与素材</summary>
       <div class="fields">
-        <div class="field"><label>Letterhead style</label><select data-path="theme.style"><option value="classic">Classic academic</option><option value="modern">Modern institutional</option><option value="minimal">Minimal official</option></select></div>
-        <div class="field"><label>Density</label><select data-path="theme.density"><option value="comfortable">Comfortable</option><option value="compact">Compact</option><option value="tight">Tight</option></select></div>
-        <div class="field"><label>Body font</label><select data-path="theme.bodyFont"><option value="Arial, Helvetica, sans-serif">Arial / Helvetica</option><option value="Georgia, 'Times New Roman', serif">Georgia</option><option value="'Times New Roman', Times, serif">Times New Roman</option><option value="Verdana, Geneva, sans-serif">Verdana</option></select></div>
-        <div class="field"><label>Heading font</label><select data-path="theme.headingFont"><option value="Georgia, 'Times New Roman', serif">Georgia</option><option value="'Times New Roman', Times, serif">Times New Roman</option><option value="Arial, Helvetica, sans-serif">Arial / Helvetica</option></select></div>
-        <div class="field"><label>Primary color</label><div class="color-input"><input data-color-path="theme.primaryColor" type="color" /><input data-path="theme.primaryColor" type="text" /></div></div>
-        <div class="field"><label>Accent color</label><div class="color-input"><input data-color-path="theme.accentColor" type="color" /><input data-path="theme.accentColor" type="text" /></div></div>
-        <div class="field full"><label>Base font size (pt)</label><input data-path="theme.baseFontSize" type="number" min="8.5" max="12" step="0.1" /></div>
-        <div class="image-field"><strong>School logo (PNG/JPG/SVG)</strong><input type="file" accept="image/*" data-image-path="school.logoDataUrl" /><button type="button" data-clear-image="school.logoDataUrl">Remove logo</button></div>
-        <div class="image-field"><strong>Authorized signature image (transparent PNG recommended)</strong><input type="file" accept="image/*" data-image-path="signatory.signatureDataUrl" /><button type="button" data-clear-image="signatory.signatureDataUrl">Remove signature</button></div>
-        <div class="image-field"><strong>School-owned letterhead background image (optional)</strong><input type="file" accept="image/*" data-image-path="school.letterheadDataUrl" /><button type="button" data-clear-image="school.letterheadDataUrl">Remove letterhead image</button></div>
+        <div class="field"><label>信头风格</label><select data-path="theme.style"><option value="classic">经典学术</option><option value="modern">现代机构</option><option value="minimal">极简正式</option></select></div>
+        <div class="field"><label>排版密度</label><select data-path="theme.density"><option value="comfortable">舒适</option><option value="compact">紧凑</option><option value="tight">极紧</option></select></div>
+        <div class="field"><label>正文字体</label><select data-path="theme.bodyFont"><option value="Arial, Helvetica, sans-serif">Arial / Helvetica</option><option value="Georgia, 'Times New Roman', serif">Georgia</option><option value="'Times New Roman', Times, serif">Times New Roman</option><option value="Verdana, Geneva, sans-serif">Verdana</option></select></div>
+        <div class="field"><label>标题字体</label><select data-path="theme.headingFont"><option value="Georgia, 'Times New Roman', serif">Georgia</option><option value="'Times New Roman', Times, serif">Times New Roman</option><option value="Arial, Helvetica, sans-serif">Arial / Helvetica</option></select></div>
+        <div class="field"><label>主色</label><div class="color-input"><input data-color-path="theme.primaryColor" type="color" /><input data-path="theme.primaryColor" type="text" /></div></div>
+        <div class="field"><label>强调色</label><div class="color-input"><input data-color-path="theme.accentColor" type="color" /><input data-path="theme.accentColor" type="text" /></div></div>
+        <div class="field full"><label>基础字号（pt）</label><input data-path="theme.baseFontSize" type="number" min="8.5" max="12" step="0.1" /></div>
+        <div class="image-field"><strong>学校 Logo（PNG/JPG/SVG）</strong><input type="file" accept="image/*" data-image-path="school.logoDataUrl" /><button type="button" data-clear-image="school.logoDataUrl">移除 Logo</button></div>
+        <div class="image-field"><strong>授权签名图（建议透明 PNG）</strong><input type="file" accept="image/*" data-image-path="signatory.signatureDataUrl" /><button type="button" data-clear-image="signatory.signatureDataUrl">移除签名</button></div>
+        <div class="image-field"><strong>学校自有信头背景图（可选）</strong><input type="file" accept="image/*" data-image-path="school.letterheadDataUrl" /><button type="button" data-clear-image="school.letterheadDataUrl">移除信头背景</button></div>
       </div>
     </details>
 
     <details>
-      <summary>Advanced JSON Editor</summary>
+      <summary>高级 JSON 编辑</summary>
       <div class="fields">
-        <div class="field full"><label>Complete editable document data</label><textarea id="rawJsonEditor" class="tall" spellcheck="false"></textarea>
-          <div class="json-actions"><button class="mini-action" type="button" data-action="refresh-json">Load current data</button><button class="mini-action" type="button" data-action="apply-json">Apply JSON</button></div>
+        <div class="field full"><label>完整可编辑文档数据</label><textarea id="rawJsonEditor" class="tall" spellcheck="false"></textarea>
+          <div class="json-actions"><button class="mini-action" type="button" data-action="refresh-json">加载当前数据</button><button class="mini-action" type="button" data-action="apply-json">应用 JSON</button></div>
         </div>
       </div>
     </details>
 
-    <p class="privacy-note">Use only school-owned branding and verified personnel data. Do not add third-party accreditation, government seals, notary marks, or credentials the school does not hold. Final PDFs should be issued only by authorized school personnel.</p>
+    <p class="privacy-note">请仅使用学校自有标识与已核实人事数据。不要添加学校不具备的第三方认证、政府印章、公证标记或资质。正式 PDF 仅应由学校授权人员签发。</p>
   </aside>
 
   <section class="workspace">
-    <div class="workspace-bar" id="workspaceMessage">U.S. Letter - 8.5 x 11 in - Print at 100% with background graphics enabled</div>
+    <div class="workspace-bar" id="workspaceMessage">美国 Letter 纸张（8.5 × 11 英寸）— 打印缩放 100%，并开启背景图形</div>
     <div class="preview-shell">
       <div class="paper-stage" id="paperStage">
         <article class="letter-sheet style-classic density-comfortable" id="letterSheet">
@@ -2071,7 +2071,7 @@ global.QRErrorCorrectLevel = __require('QRCode/QRErrorCorrectLevel.js');
           <div class="page-main">
             <header class="letterhead">
               <div class="logo-box" id="logoBox">
-                <img id="logoImage" alt="School logo" hidden />
+                <img id="logoImage" alt="学校 Logo" hidden />
                 <div class="monogram inline-editable" id="monogram" data-inline-path="school.initials"></div>
               </div>
               <div>
@@ -2104,7 +2104,7 @@ global.QRErrorCorrectLevel = __require('QRCode/QRErrorCorrectLevel.js');
             <div class="signature-verification">
               <div class="signature-block">
                 <div class="sincerely inline-editable" id="complimentaryClose" data-inline-path="letter.complimentaryClose"></div>
-                <div class="signature-image-wrap" id="signatureImageWrap"><img id="signatureImage" alt="Authorized signature" hidden /><div class="typed-signature inline-editable" id="typedSignature" data-inline-path="signatory.typedSignature"></div></div>
+                <div class="signature-image-wrap" id="signatureImageWrap"><img id="signatureImage" alt="授权签名" hidden /><div class="typed-signature inline-editable" id="typedSignature" data-inline-path="signatory.typedSignature"></div></div>
                 <div class="signature-line">
                   <div class="signatory-name" id="signatoryNameLine"></div>
                   <div class="signatory-details" id="signatoryDetails"></div>
@@ -2112,7 +2112,7 @@ global.QRErrorCorrectLevel = __require('QRCode/QRErrorCorrectLevel.js');
               </div>
 
               <div class="verification-panel" id="verificationPanel">
-                <div class="qr-wrap" id="qrWrap"><img id="qrImage" alt="Verification QR code" /></div>
+                <div class="qr-wrap" id="qrWrap"><img id="qrImage" alt="核验二维码" /></div>
                 <div>
                   <div class="verify-title inline-editable" id="verificationTitle" data-inline-path="verification.title"></div>
                   <div class="verify-text inline-editable" id="verificationInstructions" data-inline-path="verification.instructions"></div>
@@ -2376,13 +2376,13 @@ global.QRErrorCorrectLevel = __require('QRCode/QRErrorCorrectLevel.js');
     const formatted = `${hex.slice(0, 4)}-${hex.slice(4, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}`;
     data.verification.recordFingerprint = formatted;
     setText('#recordFingerprint', formatted);
-    $('#fingerprintStatus').textContent = 'Fingerprint ready';
+    $('#fingerprintStatus').textContent = '指纹已就绪';
     $('#fingerprintStatus').className = 'status-chip good';
     return formatted;
   }
 
   function scheduleFingerprint() {
-    $('#fingerprintStatus').textContent = 'Updating fingerprint';
+    $('#fingerprintStatus').textContent = '正在更新指纹';
     $('#fingerprintStatus').className = 'status-chip warn';
     clearTimeout(fingerprintTimer);
     fingerprintTimer = setTimeout(async () => { await computeFingerprint(); render(false); }, 280);
@@ -2592,13 +2592,13 @@ global.QRErrorCorrectLevel = __require('QRCode/QRErrorCorrectLevel.js');
     overflowState = sheet.scrollHeight > sheet.clientHeight + 2;
     const chip = $('#pageStatus');
     if (overflowState) {
-      chip.textContent = 'Content exceeds one page';
+      chip.textContent = '内容超过一页';
       chip.className = 'status-chip bad';
-      $('#workspaceMessage').textContent = 'Page overflow detected - shorten text or use Compact/Tight density before final export';
+      $('#workspaceMessage').textContent = '检测到页面溢出 — 请缩短正文，或改用紧凑/极紧密度后再导出正式稿';
     } else {
-      chip.textContent = 'Fits one page';
+      chip.textContent = '适合一页';
       chip.className = 'status-chip good';
-      $('#workspaceMessage').textContent = 'U.S. Letter - 8.5 x 11 in - Print at 100% with background graphics enabled';
+      $('#workspaceMessage').textContent = '美国 Letter 纸张（8.5 × 11 英寸）— 打印缩放 100%，并开启背景图形';
     }
   }
 
@@ -2635,7 +2635,7 @@ global.QRErrorCorrectLevel = __require('QRCode/QRErrorCorrectLevel.js');
     (data.letter.bodyParagraphs || []).forEach((paragraph, index) => {
       const item = document.createElement('div');
       item.className = 'array-item';
-      item.innerHTML = `<textarea data-array="paragraph" data-index="${index}"></textarea><div class="array-controls"><button type="button" data-array-action="up" data-array="paragraph" data-index="${index}" title="Move up">↑</button><button type="button" data-array-action="down" data-array="paragraph" data-index="${index}" title="Move down">↓</button><button type="button" class="remove" data-array-action="remove" data-array="paragraph" data-index="${index}" title="Remove">×</button></div>`;
+      item.innerHTML = `<textarea data-array="paragraph" data-index="${index}"></textarea><div class="array-controls"><button type="button" data-array-action="up" data-array="paragraph" data-index="${index}" title="上移">↑</button><button type="button" data-array-action="down" data-array="paragraph" data-index="${index}" title="下移">↓</button><button type="button" class="remove" data-array-action="remove" data-array="paragraph" data-index="${index}" title="删除">×</button></div>`;
       $('textarea', item).value = paragraph;
       container.appendChild(item);
     });
@@ -2647,7 +2647,7 @@ global.QRErrorCorrectLevel = __require('QRCode/QRErrorCorrectLevel.js');
     (data.detailRows || []).forEach((row, index) => {
       const item = document.createElement('div');
       item.className = 'array-item';
-      item.innerHTML = `<div class="row-grid"><input data-row-key="label" data-index="${index}" placeholder="Label" /><input data-row-key="value" data-index="${index}" placeholder="Value or {{token}}" /><select data-row-key="width" data-index="${index}"><option value="half">Half width</option><option value="full">Full width</option></select></div><div class="array-controls"><button type="button" data-array-action="up" data-array="detail" data-index="${index}" title="Move up">↑</button><button type="button" data-array-action="down" data-array="detail" data-index="${index}" title="Move down">↓</button><button type="button" class="remove" data-array-action="remove" data-array="detail" data-index="${index}" title="Remove">×</button></div>`;
+      item.innerHTML = `<div class="row-grid"><input data-row-key="label" data-index="${index}" placeholder="标签" /><input data-row-key="value" data-index="${index}" placeholder="内容或 {{token}}" /><select data-row-key="width" data-index="${index}"><option value="half">半栏</option><option value="full">整栏</option></select></div><div class="array-controls"><button type="button" data-array-action="up" data-array="detail" data-index="${index}" title="上移">↑</button><button type="button" data-array-action="down" data-array="detail" data-index="${index}" title="下移">↓</button><button type="button" class="remove" data-array-action="remove" data-array="detail" data-index="${index}" title="删除">×</button></div>`;
       $('[data-row-key="label"]', item).value = row.label || '';
       $('[data-row-key="value"]', item).value = row.value || '';
       $('[data-row-key="width"]', item).value = row.width || 'half';
@@ -2747,31 +2747,31 @@ global.QRErrorCorrectLevel = __require('QRCode/QRErrorCorrectLevel.js');
 
   function validateFinal() {
     const required = [
-      ['school.legalName', 'School legal name'], ['school.displayName', 'School display name'],
-      ['school.addressLine1', 'School street address'], ['school.cityStateZip', 'School city/state/ZIP'],
-      ['school.phone', 'School phone'], ['school.email', 'School email'], ['school.website', 'School website'],
-      ['document.issueDate', 'Issue date'], ['document.id', 'Document ID'], ['document.subject', 'Subject'],
-      ['employee.name', 'Employee name'], ['employee.jobTitle', 'Job title'], ['employee.status', 'Employment status'],
-      ['employee.startDate', 'Employment start date'], ['signatory.name', 'Signatory name'],
-      ['signatory.title', 'Signatory title'], ['signatory.phone', 'Signatory phone'], ['signatory.email', 'Signatory email']
+      ['school.legalName', '学校法定名称'], ['school.displayName', '学校显示名称'],
+      ['school.addressLine1', '学校街道地址'], ['school.cityStateZip', '学校城市/州/邮编'],
+      ['school.phone', '学校电话'], ['school.email', '学校邮箱'], ['school.website', '学校网站'],
+      ['document.issueDate', '签发日期'], ['document.id', '文档编号'], ['document.subject', '主题'],
+      ['employee.name', '员工姓名'], ['employee.jobTitle', '职位'], ['employee.status', '在职状态'],
+      ['employee.startDate', '入职日期'], ['signatory.name', '签字人姓名'],
+      ['signatory.title', '签字人职务'], ['signatory.phone', '签字人电话'], ['signatory.email', '签字人邮箱']
     ];
     const errors = [];
     const warnings = [];
-    required.forEach(([path, label]) => { if (!String(getPath(data, path) || '').trim()) errors.push(`${label} is required.`); });
-    if (!(data.letter.bodyParagraphs || []).some((text) => String(text || '').trim())) errors.push('At least one body paragraph is required.');
-    if (!effectiveDetailRows().length) errors.push('At least one employment detail row is required.');
-    if (data.employee.includeCompensation && !String(data.employee.compensation || '').trim()) errors.push('Compensation is enabled but the compensation field is empty.');
-    if (!String(data.verification.phone || data.verification.email || '').trim()) errors.push('Provide a verification phone or email.');
+    required.forEach(([path, label]) => { if (!String(getPath(data, path) || '').trim()) errors.push(`${label}为必填项。`); });
+    if (!(data.letter.bodyParagraphs || []).some((text) => String(text || '').trim())) errors.push('至少需要一段正文。');
+    if (!effectiveDetailRows().length) errors.push('至少需要一个在职证明字段。');
+    if (data.employee.includeCompensation && !String(data.employee.compensation || '').trim()) errors.push('已启用薪资，但薪资字段为空。');
+    if (!String(data.verification.phone || data.verification.email || '').trim()) errors.push('请填写核验电话或邮箱。');
     const placeholders = placeholderProblems();
-    if (placeholders.length) errors.push(`Sample or placeholder data remains in ${placeholders.length} field(s).`);
-    if (overflowState) errors.push('Content exceeds one U.S. Letter page.');
-    if (!data.school.logoDataUrl) warnings.push('No school logo is uploaded. A clean monogram will be used instead.');
-    if (!data.signatory.signatureDataUrl) warnings.push('No signature image is uploaded. The typed signature will be used.');
-    if (!data.verification.url) warnings.push('No verification URL is provided.');
-    else if (!/^https:\/\//i.test(data.verification.url)) warnings.push('The verification URL does not use HTTPS.');
-    if (!data.school.email.includes('@')) warnings.push('School email does not appear to be a complete email address.');
+    if (placeholders.length) errors.push(`仍有 ${placeholders.length} 个字段含示例或占位内容。`);
+    if (overflowState) errors.push('内容超过一页美国 Letter 纸张。');
+    if (!data.school.logoDataUrl) warnings.push('未上传学校 Logo，将使用字母标识。');
+    if (!data.signatory.signatureDataUrl) warnings.push('未上传签名图，将使用打字签名。');
+    if (!data.verification.url) warnings.push('未填写核验网址。');
+    else if (!/^https:\/\//i.test(data.verification.url)) warnings.push('核验网址未使用 HTTPS。');
+    if (!data.school.email.includes('@')) warnings.push('学校邮箱看起来不完整。');
     const personalMail = /@(gmail|yahoo|outlook|hotmail|icloud)\./i;
-    if (personalMail.test(data.school.email || '') || personalMail.test(data.signatory.email || '')) warnings.push('A personal email provider is being used; an official school or district domain is preferable.');
+    if (personalMail.test(data.school.email || '') || personalMail.test(data.signatory.email || '')) warnings.push('正在使用个人邮箱服务商；建议改用学校或学区官方域名。');
     return { valid: errors.length === 0, errors, warnings };
   }
 
@@ -2779,11 +2779,11 @@ global.QRErrorCorrectLevel = __require('QRCode/QRErrorCorrectLevel.js');
     const result = validateFinal();
     const chip = $('#validationStatus');
     if (data.document.draftWatermark) {
-      chip.textContent = 'Draft mode'; chip.className = 'status-chip warn';
+      chip.textContent = '草稿模式'; chip.className = 'status-chip warn';
     } else if (result.valid) {
-      chip.textContent = 'Final checks passed'; chip.className = 'status-chip good';
+      chip.textContent = '正式校验已通过'; chip.className = 'status-chip good';
     } else {
-      chip.textContent = `${result.errors.length} final issue${result.errors.length === 1 ? '' : 's'}`; chip.className = 'status-chip bad';
+      chip.textContent = `正式稿还有 ${result.errors.length} 项问题`; chip.className = 'status-chip bad';
     }
   }
 
@@ -2814,10 +2814,10 @@ global.QRErrorCorrectLevel = __require('QRCode/QRErrorCorrectLevel.js');
     const result = validateFinal();
     updateValidationBadge();
     if (!result.valid) {
-      alert(`Final PDF not opened because these items require attention:\n\n- ${result.errors.join('\n- ')}`);
+      alert(`因以下问题未打开正式 PDF：\n\n- ${result.errors.join('\n- ')}`);
       return;
     }
-    if (result.warnings.length && !confirm(`Final checks passed with warnings:\n\n- ${result.warnings.join('\n- ')}\n\nContinue to the print dialog?`)) return;
+    if (result.warnings.length && !confirm(`正式校验通过，但仍有提醒：\n\n- ${result.warnings.join('\n- ')}\n\n是否继续打开打印对话框？`)) return;
     window.print();
   }
 
@@ -2833,7 +2833,7 @@ global.QRErrorCorrectLevel = __require('QRCode/QRErrorCorrectLevel.js');
     }
     data.theme.density = original;
     refreshStaticControls(); render();
-    alert('The content is still longer than one page. Remove rows, shorten paragraphs, or reduce the base font size.');
+    alert('内容仍超过一页。请删除字段、缩短段落，或降低基础字号。');
     return null;
   }
 
@@ -2852,7 +2852,7 @@ global.QRErrorCorrectLevel = __require('QRCode/QRErrorCorrectLevel.js');
       try {
         setPath(data, input.dataset.imagePath, await imageToDataUrl(input.files[0]));
         render(); scheduleFingerprint();
-      } catch (error) { alert(`Image could not be loaded: ${error.message}`); }
+      } catch (error) { alert(`图片无法加载：${error.message}`); }
       input.value = '';
     }
   });
@@ -2866,22 +2866,22 @@ global.QRErrorCorrectLevel = __require('QRCode/QRErrorCorrectLevel.js');
       case 'print-draft': await printDraft(); break;
       case 'print-final': await printFinal(); break;
       case 'export-json': downloadJson(); break;
-      case 'save-local': localStorage.setItem('k12EmploymentLetterPro', JSON.stringify(data)); alert('Draft saved in this browser.'); break;
+      case 'save-local': localStorage.setItem('k12EmploymentLetterPro', JSON.stringify(data)); alert('草稿已保存在本浏览器。'); break;
       case 'load-local': {
         const saved = localStorage.getItem('k12EmploymentLetterPro');
-        if (!saved) alert('No saved browser draft was found.');
-        else { try { await setLetterData(JSON.parse(saved)); } catch (error) { alert(`Saved draft is invalid: ${error.message}`); } }
+        if (!saved) alert('未找到已保存的浏览器草稿。');
+        else { try { await setLetterData(JSON.parse(saved)); } catch (error) { alert(`已保存草稿无效：${error.message}`); } }
         break;
       }
-      case 'reset': if (confirm('Reset all fields to the sample template?')) await setLetterData(deepClone(defaultData)); break;
+      case 'reset': if (confirm('确定将所有字段重置为示例模板？')) await setLetterData(deepClone(defaultData)); break;
       case 'auto-fit': await autoFit(); break;
-      case 'add-paragraph': data.letter.bodyParagraphs.push('Add a fully editable paragraph here.'); refreshStaticControls(); render(); scheduleFingerprint(); break;
+      case 'add-paragraph': data.letter.bodyParagraphs.push('在此添加可完全编辑的段落。'); refreshStaticControls(); render(); scheduleFingerprint(); break;
       case 'add-detail-row': data.detailRows.push({ label: 'Additional Field', value: 'Editable value', width: 'half', enabled: true }); refreshStaticControls(); render(); scheduleFingerprint(); break;
       case 'sync-standard-rows': data.detailRows = standardRows(); refreshStaticControls(); render(); scheduleFingerprint(); break;
       case 'refresh-json': $('#rawJsonEditor').value = JSON.stringify(data, null, 2); break;
       case 'apply-json': {
         try { await setLetterData(JSON.parse($('#rawJsonEditor').value)); }
-        catch (error) { alert(`JSON could not be applied: ${error.message}`); }
+        catch (error) { alert(`无法应用 JSON：${error.message}`); }
         break;
       }
       default: break;
@@ -2892,7 +2892,7 @@ global.QRErrorCorrectLevel = __require('QRCode/QRErrorCorrectLevel.js');
     const file = event.target.files && event.target.files[0];
     if (!file) return;
     try { await setLetterData(JSON.parse(await file.text())); }
-    catch (error) { alert(`JSON could not be imported: ${error.message}`); }
+    catch (error) { alert(`无法导入 JSON：${error.message}`); }
     event.target.value = '';
   });
 

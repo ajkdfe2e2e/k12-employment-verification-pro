@@ -3,6 +3,7 @@
 U.S. Letter (8.5 × 11 in) **Employment Verification Letter** template for authorized K-12 school HR / principal offices.
 
 - **Online editor (GitHub Pages):** open this repository’s Pages URL, or open `k12_employment_verification_pro_editor_singlefile.html` locally in Chrome / Edge.
+- **Editor UI language:** Simplified Chinese (controls, status, validation messages). The letter body remains English for U.S. employment verification.
 - **Batch PDF:** `generate_pdf.py` + Playwright + PyMuPDF.
 - **Version:** see `VERSION.txt` (2.0.0).
 
